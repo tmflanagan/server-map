@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: app-configmap
+data:
+    API_PKG: api-service-001.zip
+    API_CONF: dir/example-api.conf
+
+    STREAM_PKG: stream-service-999.zip
+    STREAM_CONF: dir/example-stream.conf
+
+    ALT_STREAM_PKG: stream-service-997.zip
+    ALT_STREAM_CONF: dir/example-alt-stream.conf
+
+    IRRELEVANT_PKG: whatever-222.zip
+    IRRELEVANT_CONF: dir/skip-over.conf
