@@ -33,7 +33,7 @@ def main():
     # Step 2: Iterates through every config referenced in the environment keys and adds each unique TreeElement (alongside its inputs and outputs) to a dict of "nodes", merging repeats along the way
     nodes = {}
     for config in confs:
-        buildNum = re.search(r'(\d+)\.zip$', config[list(config)[0]]).group(1)
+        buildNum = re.search(r'v\d+$', config[list(config)[0]]).group(1)
         for server in list(config)[1:]:
             for filePath in args.servers:
                 if os.path.split(config[server])[-1] in filePath: # Requires identical filenames to those in dev-config
